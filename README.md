@@ -1,4 +1,6 @@
-# hugo-jk (hugo extended version + jk features) in a Container
+# HUGO-jk
+
+## HUGO (extended version + jk features) in a Container
 
 *I actively use it for my [sites](https://kuetemeier.de), you can too!*
 
