@@ -1,4 +1,6 @@
-# hugo-jk (hugo extended version + jk features) in a Docker Container
+# hugo-jk (hugo extended version + jk features) in a Container
+
+*I actively use it for my [sites](https://kuetemeier.de), you can too!*
 
 - HUGO - The world’s fastest framework for building websites
 - compiled with extended tag
