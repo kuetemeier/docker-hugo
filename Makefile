@@ -20,9 +20,22 @@ TAG := $(shell git describe --abbrev=0 --tags ${TAG_COMMIT} 2>/dev/null || true)
 # here we strip the version prefix
 VERSION := $(TAG:v%=%)
 
-.PHONY: all
+.PHONY: all build login publish clean run
 
-all:
-	@echo "Test"
-	@echo $(VERSION) 
+all: build
 
+build:
+	@echo "Version Tag: $(VERSION)"
+	docker build -t docker.pkg.github.com/kuetemeier/docker-hugo-jk/hugo-jk:$(VERSION) .
+
+login:
+	docker login -u kuetemeier -p $GITHUB_TOKEN docker.pkg.github.com
+
+publish:
+	docker push docker.pkg.github.com/kuetemeier/docker-hugo-jk/hugo-jk:$(VERSION)
+
+clean:
+	docker image rm docker.pkg.github.com/kuetemeier/docker-hugo-jk/hugo-jk:$(VERSION)
+
+run:
+	docker run --rm docker.pkg.github.com/kuetemeier/docker-hugo-jk/hugo-jk:$(VERSION) version

@@ -12,7 +12,7 @@ For example it includes support for [imgIX](https://www.imgix.com/) and ImagePro
 
 ## Using this image
 
-```
+```shell
 docker run docker.pkg.github.com/kuetemeier/docker-hugo-jk/hugo-jk:latest version
 ```
 
@@ -23,6 +23,40 @@ docker run docker.pkg.github.com/kuetemeier/docker-hugo-jk/hugo-jk:latest versio
 Some just need a litte bit more polishing, some more time to evolve and some just simply more documentation. And then they may eventually find their way into the official branch (the decision to do so is beyond our control).
 
 But I need and use them right now to build my site. I actively use them and you can too. Free of charge, with this Container Image.
+
+## Versioning
+
+Packages (Releases) are tagged with a double version tag like `x.x.x-jk-x.x.x`.
+
+The first version is the package release version. The second one is the included HUGO version.
+
+## Development Notes
+
+These notes are only for development are *not needed for a daily use in production*. You can safely skip them.
+
+Use the `Makefile` for an easier life.
+
+### Create the container localy
+
+```shell
+git clone git@github.com:kuetemeier/docker-hugo-jk.git
+make build
+```
+
+### Run / Test the container
+
+```shell
+make run
+```
+
+### Develop process
+
+1. Make changes / test / build locally
+2. Commit your changes to the repo
+3. Tag the changes `git tag x.x.x-jk-x.x.x` (see Versioning)
+4. `make build`
+5. `make login`
+6. `make publish`
 
 ## License
 
