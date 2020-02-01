@@ -1,19 +1,20 @@
-# hugo-jk
+# hugo-jk (hugo extended version + jk features) in a Docker Container
 
-*My Docker Image for HUGO - The world’s fastest framework for building websites*
+- HUGO - The world’s fastest framework for building websites
+- compiled with extended tag
+- and with additional features from my [jk development branch](https://github.com/kuetemeier/hugo/tree/jk)
 
-## Short Version
+For example it includes support for [imgIX](https://www.imgix.com/) and ImageProxy.
 
-`hugo`in an alpine based Docker Image, compiled with extended tags and some additinal features from our [jk development branch](https://github.com/kuetemeier/hugo/tree/jk).
+## Using this image
 
-## Long Version
+```
+docker run docker.pkg.github.com/kuetemeier/docker-hugo-jk/hugo-jk:latest version
+```
 
-This is the docker image we use to build and develop our website <https://kuetemeier.de>.
-It is build out of the official [Hugo source files](https://github.com/gohugoio/hugo)
-with some additional features out of our [jk development branch](https://github.com/kuetemeier/hugo/tree/jk).
+## Merging features into official HUGO sources
 
-For example support for [imgIX](https://www.imgix.com/) and ImageProxy.
+When time has come, we will try to integrate the additional features into the official HUGO project. Some just need a
+litte bit more polishing, some more time to evolve and some just simply more documentation. And then they may eventually find their way into the official branch (the decision to do so is beyond our control).
 
-When time has come, we will try to integrate this in the official Hugo project. Some features just need a
-litte bit more polishing some more time to evolve and some just simply more documentation, before they may be
-integrated in the official branch (the decision to do so is beyond our control).
+But for now... I need it to build my site with this features right now. And so can you. It's free.
