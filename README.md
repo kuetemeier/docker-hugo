@@ -13,8 +13,10 @@ For example it includes support for [imgIX](https://www.imgix.com/) and ImagePro
 ## Using this image
 
 ```shell
-docker run docker.pkg.github.com/kuetemeier/docker-hugo-jk/hugo-jk:latest version
+docker run --rm docker.pkg.github.com/kuetemeier/docker-hugo-jk/hugo-jk:1.0.0-jk-0.64.0-DEV version
 ```
+
+See a list of all [available Packages](https://github.com/kuetemeier/docker-hugo-jk/packages)
 
 ## Merging features into official HUGO sources
 
@@ -54,9 +56,10 @@ make run
 1. Make changes / test / build locally
 2. Commit your changes to the repo
 3. Tag the changes `git tag x.x.x-jk-x.x.x` (see Versioning)
-4. `make build`
-5. `make login`
-6. `make publish`
+4. `git push --tags origin`
+5. `make build`
+6. `make login`
+7. `make publish`
 
 ## License
 
