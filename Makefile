@@ -24,8 +24,10 @@ VERSION := $(TAG:v%=%)
 
 all: build
 
-build:
+version:
 	@echo "Version Tag: $(VERSION)"
+
+build:	version
 	docker build -t docker.pkg.github.com/kuetemeier/docker-hugo-jk/hugo-jk:$(VERSION) .
 
 login:
