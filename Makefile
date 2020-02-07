@@ -29,7 +29,7 @@ build:
 	docker build -t docker.pkg.github.com/kuetemeier/docker-hugo-jk/hugo-jk:$(VERSION) .
 
 login:
-	docker login -u kuetemeier -p $GITHUB_TOKEN docker.pkg.github.com
+	echo $GITHUB_TOKEN | docker login --password-stdin -u kuetemeier docker.pkg.github.com
 
 publish:
 	docker push docker.pkg.github.com/kuetemeier/docker-hugo-jk/hugo-jk:$(VERSION)
