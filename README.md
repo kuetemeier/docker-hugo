@@ -4,9 +4,12 @@
 
 *I actively use it for my [sites](https://kuetemeier.de), you can too!*
 
+### What is included?
+
 - HUGO - The world’s fastest framework for building websites
 - compiled with extended tag
-- and with additional features from my [jk development branch](https://github.com/kuetemeier/hugo/tree/jk)
+- `git` binary in container image for `--enableGitInfo` support
+- additional features from my [jk development branch](https://github.com/kuetemeier/hugo/tree/jk)
 
 For example it includes support for [imgIX](https://www.imgix.com/) and ImageProxy.
 
@@ -21,7 +24,7 @@ docker run --rm docker.pkg.github.com/kuetemeier/docker-hugo-jk/hugo-jk:1.0.0-jk
 should output something like:
 
 ```text
-Hugo Static Site Generator v0.64.0-9D3A6EB8/extended linux/amd64 BuildDate: 2020-02-07T19:39:26Z 
+Hugo Static Site Generator v0.64.0-9D3A6EB8/extended linux/amd64 BuildDate: 2020-02-07T19:39:26Z
 ```
 
 ## Merging features into official HUGO sources
