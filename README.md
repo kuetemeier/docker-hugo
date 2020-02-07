@@ -15,7 +15,7 @@ For example it includes support for [imgIX](https://www.imgix.com/) and ImagePro
 See a list of all [available Packages](https://github.com/kuetemeier/docker-hugo-jk/packages)
 
 ```shell
-docker run --rm docker.pkg.github.com/kuetemeier/docker-hugo-jk/hugo-jk:1.0.0-jk-0.64.0-DEV version
+docker run --rm docker.pkg.github.com/kuetemeier/docker-hugo-jk/hugo-jk:1.0.0-jk-0.64.0 version
 ```
 
 should output something like:
