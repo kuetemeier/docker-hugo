@@ -21,7 +21,7 @@ docker run --rm docker.pkg.github.com/kuetemeier/docker-hugo-jk/hugo-jk:1.0.0-jk
 should output something like:
 
 ```text
-Hugo Static Site Generator v0.64.0-9D3A6EB8/extended linux/amd64 BuildDate: 2020-02-01T15:25:16Z
+Hugo Static Site Generator v0.64.0-9D3A6EB8/extended linux/amd64 BuildDate: 2020-02-07T19:39:26Z 
 ```
 
 ## Merging features into official HUGO sources
