@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM golang:1.13-alpine AS builder
+FROM golang:1.16.2-alpine AS builder
 
 ARG HUGO_BUILD_TAGS=extended
 
@@ -38,7 +38,7 @@ RUN mage hugo && mage install
 
 # ---
 
-FROM alpine:3.11
+FROM alpine:3.13.3
 
 COPY --from=builder /go/bin/hugo /usr/bin/hugo
 
